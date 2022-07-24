@@ -2,6 +2,12 @@
 
 gomvp is a simple CLI tool that helps you refactor packages and rename modules.
 
+## Installation
+
+`go install github.com/abenz1267/gomvp@latest`
+
+... or download the binary from the releases.
+
 ## Usage
 
 `gomvp <src pkg> <dst pkg>`, for example `gomvp somepackage movedpackage`
