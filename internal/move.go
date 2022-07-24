@@ -22,6 +22,10 @@ func Move(src, dest string) {
 
 	base := strings.Split(dest, string(filepath.Separator))
 
+	if _, err := os.Stat(filepath.Join(root, dest)); !os.IsNotExist(err) {
+		panic("package already exists.")
+	}
+
 	err = os.MkdirAll(filepath.Join(root, filepath.Join(base[:len(base)-1]...)), 0o755)
 	if err != nil {
 		panic(err)
